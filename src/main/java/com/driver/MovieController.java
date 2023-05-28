@@ -11,6 +11,7 @@ import java.util.List;
  */
 
 @RestController
+@RequestMapping("movies")
 public class MovieController {
 
     MovieService ms = new MovieService();
@@ -18,13 +19,13 @@ public class MovieController {
     @PostMapping("/add-movie")
     public ResponseEntity<String> addMovie(@RequestBody Movie movie) {
         ms.addMovie(movie);
-        return new ResponseEntity<>("New Movie "+ movie.getName()+" Added Successfully", HttpStatus.CREATED);
+        return new ResponseEntity<>("New Movie " + movie.getName() + " Added Successfully", HttpStatus.CREATED);
     }
 
     @PostMapping("/add-director")
     public ResponseEntity<String> addDirector(@RequestBody Director director) {
         ms.addDirector(director);
-        return new ResponseEntity<>("New Director Added Successfully", HttpStatus.CREATED);
+        return new ResponseEntity<>("New Director " + director.getName() + " Added Successfully", HttpStatus.CREATED);
     }
 
     @PutMapping("/add-movie-director-pair")
