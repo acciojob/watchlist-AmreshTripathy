@@ -40,8 +40,8 @@ public class MovieRepository {
         return moviesWithDirectorMap.getOrDefault(director, new ArrayList<>());
     }
 
-    public List<Movie> findAllMovies() {
-        return new ArrayList<>(moviesData.values());
+    public List<String> findAllMovies() {
+        return new ArrayList<>(moviesData.keySet());
     }
 
     public void deleteDirectorByName(String director) {

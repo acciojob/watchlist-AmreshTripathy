@@ -53,8 +53,8 @@ public class MovieController {
     }
 
     @GetMapping("/get-all-movies")
-    public ResponseEntity<List<Movie>> findAllMovies() {
-        List<Movie> allMovies = ms.findAllMovies();
+    public ResponseEntity<List<String>> findAllMovies() {
+        List<String> allMovies = ms.findAllMovies();
         return new ResponseEntity<>(allMovies, HttpStatus.ACCEPTED);
     }
 
