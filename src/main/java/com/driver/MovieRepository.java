@@ -10,15 +10,9 @@ import java.util.Set;
  * @author Amresh Tripathy
  */
 public class MovieRepository {
-    private Map<String, Movie> moviesData;
-    private Map<String, Director> directorsData;
-    private Map<String, List<String>> moviesWithDirectorMap;
-
-    public MovieRepository() {
-        moviesData = new HashMap<>();
-        directorsData = new HashMap<>();
-        moviesWithDirectorMap = new HashMap<>();
-    }
+    private Map<String, Movie> moviesData = new HashMap<>();
+    private Map<String, Director> directorsData = new HashMap<>();
+    private Map<String, List<String>> moviesWithDirectorMap = new HashMap<>();
 
     public void addMovie(Movie movie) {
         moviesData.put(movie.getName(), movie);
