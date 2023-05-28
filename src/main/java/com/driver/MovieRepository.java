@@ -35,11 +35,11 @@ public class MovieRepository {
     }
 
     public Movie getMovieByName(String name) {
-        return moviesData.get(name);
+        return moviesData.getOrDefault(name, new Movie());
     }
 
     public Director getDirectorByName(String name) {
-        return directorsData.get(name);
+        return directorsData.getOrDefault(name, new Director());
     }
 
     public List<String> getMoviesByDirectorName(String director) {
